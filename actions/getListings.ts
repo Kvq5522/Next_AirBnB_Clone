@@ -24,8 +24,6 @@ export default async function getListings(params: IListingsParams) {
       locationValue,
     } = params;
 
-    console.log(params);
-
     let query: any = {};
 
     if (userId) {
@@ -85,10 +83,8 @@ export default async function getListings(params: IListingsParams) {
       include: { reservations: true },
     });
 
-    console.log(listings);
-
     return listings;
   } catch (error: any) {
-    throw new Error(error.message);
+    throw null;
   }
 }

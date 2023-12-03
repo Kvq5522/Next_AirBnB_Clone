@@ -6,6 +6,8 @@ import getReservations from "@/actions/getReservations";
 import PropertyClient from "./PropertyClient";
 import getListings from "@/actions/getListings";
 
+export const dynamic = "force-dynamic";
+
 interface IParams {
   listingId?: string;
 }
